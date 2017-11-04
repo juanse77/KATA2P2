@@ -22,21 +22,20 @@ public class Kata4 {
 
     public static void main(String[] args) {
         Kata4 kata4 = new Kata4("emailsfile.txt");
-        kata4.execute();
+ 
+        try {
+            kata4.execute();
+        } catch (FileNotFoundException e) {
+            System.out.println("Fichero no encontrado: " + e.getMessage());
+        } catch (IOException e) {
+            System.out.println("Error de entrada salida: " + e.getMessage());
+        }
     }
 
-    public void execute() {
-        try {
-            
-            input();
-            process();
-            output();
-            
-        } catch (FileNotFoundException e) {
-            System.out.println("Fichero no encontrado");
-        } catch (IOException e) {
-            System.out.println("Error de entrada salida");
-        }
+    public void execute() throws IOException {
+        input();
+        process();
+        output();
     }
 
     public void input() throws IOException {
