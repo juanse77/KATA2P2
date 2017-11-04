@@ -1,6 +1,6 @@
 package kata4.view;
 
-//import java.awt.Dimension;
+import java.awt.Dimension;
 import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -27,7 +27,7 @@ public class HistogramDisplay extends ApplicationFrame{
 
     private JPanel createPanel() {
         ChartPanel chartPanel = new ChartPanel(createChart(createDataset()));
-        //chartPanel.setPreferredSize(new Dimension(500, 400));
+        chartPanel.setPreferredSize(new Dimension(600, 400));
         return chartPanel;
     }
     
