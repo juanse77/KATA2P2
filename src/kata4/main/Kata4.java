@@ -48,7 +48,7 @@ public class Kata4 {
     }
 
     public void output() {
-        HistogramDisplay histoDisplay = new HistogramDisplay(histogram);
+        histoDisplay = new HistogramDisplay(histogram);
         histoDisplay.execute();
     }
 
